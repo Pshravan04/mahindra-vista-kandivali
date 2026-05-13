@@ -4,25 +4,14 @@
 <head>
 
     <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K4ZHLNKN');</script>
-    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://mahindranewlaunch.com/Kanjur - Bhandup*" />
 
     <!-- Primary Meta Tags -->
     <title>Mahindra Vista Kandivali East | Premium 2, 3 & 4 BHK Apartments</title>
     <meta name="description"
-        content="Mahindra Vista Kandivali East - Experience luxury living at its best. Premium 2, 3 & 4 BHK apartments off Western Express Highway, Akurli Road. Book your dream home today!">
+        content="Mahindra Vista Kandivali East is a premium residential project located in the heart of Mumbai. Designed to offer modern living, it combines stylish architecture with green surroundings.">
     <meta name="keywords"
-        content="Mahindra Vista, Mahindra Vista Kandivali, Mahindra Vista Kandivali East, Mahindra Lifespaces Kandivali, New Launch Kandivali East, 2 BHK in Kandivali East, 3 BHK in Kandivali East, 4 BHK in Kandivali East">
+        content="Mahindra Vista, Kandivali East, Premium apartments, 2 BHK Kandivali, 3 BHK Kandivali, 4 BHK Kandivali, Mahindra Lifespaces, Luxury homes Mumbai, Eco-friendly community">
 
 
     <meta name="robots" content="index, follow">
@@ -40,31 +29,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Georama:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        'heading': ['Georama', 'serif'],
-                        'body': ['Jost', 'sans-serif'],
-                    },
                     colors: {
-                        'primary': '#DD052B',
-                        'accent': '#565657',
-                        'secondary': '#F8F9FA',
+                        navy: {
+                            DEFAULT: '#0F172A',
+                            light: '#1E293B',
+                            dark: '#020617',
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#996515',
+                        },
+                        accent: '#C9211A',
+                        surface: '#F8FAFC',
+                        primary: '#0F1724',
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -149,15 +148,49 @@
         }
 
         /* Scroll reveal animation */
-        .reveal {
+        .reveal, .section-reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .reveal.active {
+        .reveal.active, .section-reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Premium Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card-dark {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Micro-animations */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hover-gold:hover {
+            color: #D4AF37 !important;
         }
     </style>
     <style>
@@ -198,89 +231,87 @@
 </head>
 
 <body class="bg-white text-primary font-body">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4ZHLNKN" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
+    <nav class="fixed w-full z-50 bg-navy/90 backdrop-blur-md border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="assets/logo.png" alt="Mahindra Vista" class="h-12 w-auto">
+                </div>
 
-    <!-- STICKY NAVBAR -->
-    <nav id="navbar"
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#E61937] border-b border-gray-900" ">
-    <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <a href="#hero" class="flex items-center">
-                    <img src="assets/logo.png" alt="Mahindra logo" class="h-14 w-auto object-contain"
-                        style="border-radius: 8px;" />
-                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#overview" class="text-white hover:text-gold transition font-medium">Overview</a>
+                    <a href="#amenities" class="text-white hover:text-gold transition font-medium">Amenities</a>
+                    <a href="#pricing" class="text-white hover:text-gold transition font-medium">Price List</a>
+                    <a href="#floor-plans" class="text-white hover:text-gold transition font-medium">Floor Plans</a>
+                    <a href="#location" class="text-white hover:text-gold transition font-medium">Location</a>
+                    <button onclick="openPopup('Schedule Visit')"
+                        class="bg-gold hover:bg-gold-dark text-navy font-bold px-6 py-2.5 rounded-lg transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-gold/20">
+                        Book Site Visit
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="mobile-menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
             </div>
-
-            <div class="hidden lg:flex items-center space-x-6">
-                <a href="#home" class="text-white hover:text-accent font-semibold text-md">Home</a>
-                <a href="#amenities" class="text-white hover:text-accent font-semibold text-md">Amenities</a>
-                <a href="#pricing" class="text-white hover:text-accent font-semibold text-md">Price & Configurations</a>
-                <a href="#floor-plans" class="text-white hover:text-accent font-semibold text-md">Floor Plans</a>
-                <a href="#gallery" class="text-white hover:text-accent font-semibold text-md">Gallery</a>
-                <a href="#location" class="text-white hover:text-accent font-semibold text-md">Location</a>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="hidden lg:block">
-
-                <a href="#contact" onclick="openPopup('Download Brochure')"
-                    class="animated-gradient-button block text-center text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg transition-transform duration-300">
-                    Enquire Now
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-700">
-            <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="#home" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Home</a>
-                <a href="#amenities" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Amenities</a>
-                <a href="#pricing" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Price &
-                    Configurations</a>
-                <a href="#floor-plans" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Floor Plans</a>
-                <a href="#gallery" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Gallery</a>
-                <a href="#location" class="block text-[#C9211A] hover:text-accent py-2 font-medium">Location</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#overview"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Overview</a>
+                <a href="#amenities"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Amenities</a>
+                <a href="#pricing"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Price
+                    & Configurations</a>
+                <a href="#floor-plans"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Floor
+                    Plans</a>
+                <a href="#gallery"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Gallery</a>
+                <a href="#location"
+                    class="block px-3 py-3 text-navy hover:bg-gray-50 rounded-lg font-medium border-b border-gray-100">Location</a>
 
-                <a href="#contact" onclick="openPopup('Enquire Now')"
-                    class="animated-gradient-button block text-center text-white py-3 rounded-lg font-semibold mt-4 shadow-lg hover:scale-105 transition-transform duration-300">
-                    Enquire Now
-                </a>
+                <div class="pt-4">
+                    <button onclick="openPopup('Enquire Now')"
+                        class="animated-gradient-button w-full text-center text-white py-3.5 rounded-xl font-semibold shadow-lg transition-all active:scale-95">
+                        Enquire Now
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
     <script>
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const menuPath = document.getElementById('menu-path');
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            const path = document.getElementById('mobile-menu-path');
+            const isOpen = !menu.classList.contains('hidden');
 
-        let menuOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            mobileMenu.classList.toggle('hidden');
-
-            // Animate icon between menu and close
-            if (menuOpen) {
-                menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X icon
+            if (isOpen) {
+                menu.classList.add('hidden');
+                path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
             } else {
-                menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Menu icon
+                menu.classList.remove('hidden');
+                path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
             }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-path').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
         });
     </script>
 
@@ -291,11 +322,11 @@
         <section id="hero" class="relative w-full min-h-screen bg-gray-100 overflow-hidden scroll-mt-16">
             <!-- Background Image (Visible on mobile at top) -->
             <div class="lg:hidden w-full h-full">
-                <img src="assets/banner.png" alt="Background" class="w-full h-full object-cover" />
+                <img src="assets/banner-1.webp" alt="Background" class="w-full h-full object-cover" />
             </div>
 
             <!-- Absolute BG Image for large screens -->
-            <img src="assets/banner.png" alt="Background"
+            <img src="assets/banner-1.webp" alt="Background"
                 class="hidden lg:block absolute top-0 left-0 w-full h-full object-cover z-0" />
 
             <!-- Content -->
@@ -305,20 +336,14 @@
                 <!-- Left Card Wrapper (remains on the left) -->
                 <div
                     class="w-full lg:w-[28%] bg-white/90 shadow-lg rounded-xl p-6 border flex flex-col justify-center min-h-[500px]">
-                    <div class="bg-accent/10 border-l-4 border-accent p-4 mb-6">
-                        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-1">Coming Soon</p>
-                        <p class="text-primary font-medium">The Most Awaited Launch of Kandivali East</p>
-                    </div>
                     <div class="space-y-4">
                         <p class="text-lg text-gray-700 font-semibold uppercase text-center">
                             Launching Soon
                         </p>
-                        <h2 class="text-2xl font-heading font-bold text-[#C9211A] text-center">Mahindra Rainforest
-                        </h2>
-                        <p class="text-sm text-gray-500 font-body text-center"><strong>At LBS Marg, Kanjur - Bhandup*
-
-                            </strong><br>By Mahindra Lifespaces
-                        </p>
+                        <h1 class="text-2xl md:text-3xl font-heading font-bold text-[#C9211A] text-center mb-2">Premium
+                            2, 3 & 4 BHK apartments in Kandivali East</h1>
+                        <p class="text-sm text-gray-700 text-center mb-4 font-semibold uppercase tracking-wider">
+                            Nature-themed residential project in Kandivali</p>
 
                         <div class="flex justify-between text-sm text-gray-700 font-medium border-t border-b py-2">
                             <div>
@@ -326,18 +351,18 @@
                                 <p class="font-bold text-gray-800">3.53 Acres</p>
                             </div>
                             <div>
-                                <p class="text-xs text-gray-600 text-center">Phase 1</p>
-                                <p class="text-center text-black">5 Towers</p>
+                                <p class="text-xs text-gray-600 text-center">Towers</p>
+                                <p class="text-center text-black font-bold">5 Towers</p>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-500 uppercase tracking-wider">Possession</p>
-                                <p class="font-bold text-gray-800">December 2028*</p>
+                                <p class="text-sm font-bold text-gray-800">December 2028 *</p>
                             </div>
                         </div>
 
                         <div
                             class="animated-gradient-button block text-center text-white font-heading font-semi-bold text-center text-sm rounded-lg px-3 py-2">
-                            <p>The Most Awaited Launch of Kanjur - Bhandup*</p>
+                            <p>The Most Awaited Launch of Kandivali East*</p>
                             <p> Participate in EOI</p>
                             <p> Avail early bird benefits</p>
                             <p> Get Choice of Inventory</p>
@@ -351,7 +376,7 @@
                                     All Units with Balconies & Dry Area <br>
                                     Few selected units are having walk in closet
                                 </span> <br><br>
-                                Luxurious 2 & 3 BHK premium residences
+                                Luxurious 2, 3 & 4 BHK premium residences
                             </p>
                             <p class="text-lg text-center font-heading font-bold mt-1">
                                 <span class="text-base font-medium text-gray-700">Starting From <strong>₹ 1.99
@@ -420,11 +445,11 @@
         <section id="highlights" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Mahindra Rainforest
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Mahindra Vista
                         Project
                         Highlights</h2>
                     <p class="text-xl text-gray-600 max-w-2xl mx-auto">Exceptional features that define luxury living in
-                        Kanjur - Bhandup*. 50+ Modern Amenities.</p>
+                        Kandivali East. 50+ Modern Amenities.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -434,8 +459,8 @@
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="map" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">37-Acre Township</h3>
-                        <p class="text-sm text-gray-600">Massive mixed-use development project</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Land Parcel</h3>
+                        <p class="text-sm text-gray-600">3.53 Acres of Development</p>
                     </div>
 
                     <!-- Highlight 2 -->
@@ -444,8 +469,8 @@
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="building" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">65000 Sqft Clubhouse</h3>
-                        <p class="text-sm text-gray-600">A massive landmark recreational hub</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Tower</h3>
+                        <p class="text-sm text-gray-600">5 Majestic Towers</p>
                     </div>
 
                     <!-- Highlight 3 -->
@@ -454,38 +479,38 @@
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="layout" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">2 & 3 BHK with Large Decks</h3>
-                        <p class="text-sm text-gray-600">Spacious homes with panoramic views</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">35+ Luxury Amenities</h3>
+                        <p class="text-sm text-gray-600">World-class lifestyle features</p>
                     </div>
 
                     <!-- Highlight 4 -->
                     <div
                         class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100">
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="star" class="text-[#C9211A] w-8 h-8"></i>
+                            <i data-lucide="map-pin" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">3.5 Lakh Sq.Ft. of Amenities</h3>
-                        <p class="text-sm text-gray-600">World-class luxury and convenience</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Location</h3>
+                        <p class="text-sm text-gray-600">Kandivali East, Mumbai</p>
                     </div>
 
                     <!-- Highlight 5 -->
                     <div
                         class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100">
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="trees" class="text-[#C9211A] w-8 h-8"></i>
+                            <i data-lucide="calendar" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">7+ Acres of Dense Green</h3>
-                        <p class="text-sm text-gray-600">Lush landscapes and open spaces</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Possession</h3>
+                        <p class="text-sm text-gray-600">Expected December 2028</p>
                     </div>
 
                     <!-- Highlight 6 -->
                     <div
                         class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100">
                         <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="eye" class="text-[#C9211A] w-8 h-8"></i>
+                            <i data-lucide="home" class="text-[#C9211A] w-8 h-8"></i>
                         </div>
-                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Mesmerising Views</h3>
-                        <p class="text-sm text-gray-600">Airoli Greek, Powai Lake & Sanjay Gandhi National Park</p>
+                        <h3 class="font-heading text-lg font-bold text-gray-800 mb-2">Units</h3>
+                        <p class="text-sm text-gray-600">2, 3 & 4 BHK Apartments</p>
                     </div>
                 </div>
             </div>
@@ -500,13 +525,13 @@
         <!-- About Section -->
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
                     <div>
                         <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-6">About Mahindra
-                            Rainforest Kanjur - Bhandup*
+                            Vista Kandivali East
                         </h2>
                         <p class="text-lg text-gray-700 mb-6 font-body leading-relaxed">
-                            Mahindra Rainforest Kanjur - Bhandup* is a premium residential project located in the heart
+                            Mahindra Vista Kandivali East is a premium residential project located in the heart
                             of
                             Mumbai.
                             Designed to offer modern living, it combines stylish architecture with green surroundings.
@@ -522,7 +547,7 @@
                             This property is one of the visionary projects of Mahindra Lifespaces. The one-of-its-kind
                             residential project is thoughtfully designed by harnessing the power of technology,
                             sustainability and innovation. The project has stand out features that makes it Rule the
-                            Roost in Kanjur - Bhandup*
+                            Roost in Kandivali East*
                         </p>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="bg-gray-50 p-4 rounded-lg">
@@ -531,7 +556,7 @@
                             </div>
                             <div class="bg-gray-50 p-4 rounded-lg">
                                 <h4 class="font-semibold text-[#C9211A] mb-2">Project Area</h4>
-                                <p class="text-2xl font-bold text-gold">37 Acres</p>
+                                <p class="text-2xl font-bold text-gold">3.53 Acres</p>
                             </div>
                         </div>
                     </div>
@@ -540,7 +565,7 @@
 
 
                     <div class="relative">
-                        <img src="assets/about.png" alt="Luxury Interior Design" class="w-full rounded-2xl shadow-2xl">
+                        <img src="assets/banner-3.webp" alt="Luxury Interior Design" class="w-full rounded-2xl shadow-2xl">
                         <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gold/20 rounded-full blur-3xl"></div>
                         <div class="absolute -top-6 -left-6 w-24 h-24 bg-navy/20 rounded-full blur-2xl"></div>
                     </div>
@@ -551,122 +576,165 @@
 
 
         <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">
-                        Mahindra Rainforest Price & Configurations
+        <section id="pricing" class="py-24 bg-surface relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div
+                class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl">
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-accent font-bold uppercase tracking-widest text-sm mb-2 block">Price List</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-navy mb-4">
+                        Premium Pricing Plans
                     </h2>
-                    <p class="text-xl text-gray-600">Premium 2 & 3 BHK residences with Balconies & Dry Areas</p>
-                    <!-- <p class="text-md text-[#C9211A] font-bold mt-2">Jodi Options Available: 2+2 | 3+2 | 3+3</p> -->
+                    <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto font-body">Premium configurations designed for a
+                        lifestyle of elegance and comfort.</p>
                 </div>
 
-                <!-- BHK Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <!-- 1 BHK -->
+                    <div
+                        class="glass-card rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group reveal">
+                        <div class="mb-6">
+                            <span
+                                class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full uppercase">Cozy
+                                Luxury</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-2">Premium 1 BHK Residence</h3>
+                        <p class="text-gray-500 text-sm mb-6">Designed for efficient and comfortable living.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="maximize" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>450 - 480 sq.ft</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>Modern Layout</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="text-gray-400 text-sm mb-1 uppercase tracking-wider">Starting From</p>
+                            <p class="text-3xl font-bold text-navy">₹ 1.30 Cr*</p>
+                        </div>
+                        <button onclick="openPopup('Price List 1 BHK')"
+                            class="animated-gradient-button w-full text-white py-4 rounded-2xl font-bold shadow-lg shadow-accent/20 group-hover:scale-105 transition-all duration-300">
+                            Check Details
+                        </button>
+                    </div>
 
                     <!-- 2 BHK -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">Premium 2 BHK</h3>
-                        <p class="text-gray-600 mt-1">Spacious & Efficient Design</p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">Luxury Finishes</p>
-                        <p class="text-gray-900 font-bold mt-2 text-sm text-2xl">₹ 1.65 Cr* <span class="text-sm font-medium">Onwards</span></p>
+                    <div class="glass-card rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group reveal"
+                        style="transition-delay: 100ms">
+                        <div class="mb-6">
+                            <span class="bg-gold/10 text-gold text-xs font-bold px-3 py-1 rounded-full uppercase">Most
+                                Popular</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-2">Premium 2 BHK Residence</h3>
+                        <p class="text-gray-500 text-sm mb-6">Perfect balance of space and sophistication.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="maximize" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>750 - 800 sq.ft</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>Dry Area Included</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="text-gray-400 text-sm mb-1 uppercase tracking-wider">Starting From</p>
+                            <p class="text-3xl font-bold text-navy">₹ 1.99 Cr*</p>
+                        </div>
                         <button onclick="openPopup('Price List 2 BHK')"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Request Price Breakup</button>
+                            class="animated-gradient-button w-full text-white py-4 rounded-2xl font-bold shadow-lg shadow-accent/20 group-hover:scale-105 transition-all duration-300">
+                            Check Details
+                        </button>
                     </div>
 
                     <!-- 3 BHK -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">Premium 3 BHK</h3>
-                        <p class="text-gray-600 mt-1">Large Decks & Cross Ventilation</p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">Superior Comfort</p>
-                        <p class="text-gray-900 font-bold mt-2 text-sm text-2xl">₹ 2.65 Cr* <span class="text-sm font-medium">Onwards</span></p>
+                    <div class="glass-card rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group reveal"
+                        style="transition-delay: 200ms">
+                        <div class="mb-6">
+                            <span
+                                class="bg-navy/10 text-navy text-xs font-bold px-3 py-1 rounded-full uppercase">Spacious
+                                Luxury</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-2">Premium 3 BHK Residence</h3>
+                        <p class="text-gray-500 text-sm mb-6">Elegance meets functionality for modern families.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="maximize" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>1000 - 1100 sq.ft</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>Premium View Units</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="text-gray-400 text-sm mb-1 uppercase tracking-wider">Starting From</p>
+                            <p class="text-3xl font-bold text-navy">₹ 2.99 Cr*</p>
+                        </div>
                         <button onclick="openPopup('Price List 3 BHK')"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Request Price Breakup</button>
+                            class="animated-gradient-button w-full text-white py-4 rounded-2xl font-bold shadow-lg shadow-accent/20 group-hover:scale-105 transition-all duration-300">
+                            Check Details
+                        </button>
                     </div>
 
                     <!-- 4 BHK -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">Premium 4 BHK</h3>
-                        <p class="text-gray-600 mt-1">Penthouse Style Living</p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">Ultimate Luxury</p>
-                        <p class="text-gray-900 font-bold mt-2 text-sm text-2xl">₹ 3.99 Cr* <span class="text-sm font-medium">Onwards</span></p>
-                        <button onclick="openPopup('Price List 4 BHK')"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Request Price Breakup</button>
-                    </div>
-                </div>
-
-                    <!-- 3 BHK P -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">3 BHK P</h3>
-                        <p class="text-gray-600 mt-1">Carpet Area: <span class="font-semibold">967 sq.ft</span></p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">with Balcony</p>
-                        <p class="text-gray-500 font-medium mt-1 text-sm italic">Price on Request</p>
-                        <button onclick="openPopup()"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Price
-                            breakup</button>
-                    </div>
-
-                    <!-- 3 BHK L -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">3 BHK L</h3>
-                        <p class="text-gray-600 mt-1">Carpet Area: <span class="font-semibold">1125 sq.ft</span></p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">with Balcony</p>
-                        <p class="text-gray-500 font-medium mt-1 text-sm italic">Price on Request</p>
-                        <button onclick="openPopup()"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Price
-                            breakup</button>
-                    </div>
-
-                    <!-- 3 BHK XL -->
-                    <div class="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-800">3 BHK XL</h3>
-                        <p class="text-gray-600 mt-1">Carpet Area: <span class="font-semibold">1300 sq.ft</span></p>
-                        <p class="text-[#C9211A] font-bold mt-2 text-sm italic">Balcony with the walk-in closet</p>
-                        <p class="text-gray-500 font-medium mt-1 text-sm italic">Price on Request</p>
-                        <button onclick="openPopup()"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full">Price
-                            breakup</button>
-                    </div>
-
-                    <!-- Jodi Options -->
-                    <div
-                        class="bg-[#F2F9FF] rounded-2xl shadow-md border border-[#C9211A]/20 hover:shadow-xl transition-all p-6 text-center lg:col-span-2">
-                        <h3 class="text-xl font-bold text-[#C9211A]">Ultimate Jodi Configurations</h3>
-                        <div class="flex justify-center gap-6 mt-3">
+                    <div class="glass-card rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group reveal"
+                        style="transition-delay: 300ms">
+                        <div class="mb-6">
                             <span
-                                class="bg-white px-4 py-1 rounded-full border border-gray-200 font-bold text-gray-700">2
-                                + 2</span>
-                            <span
-                                class="bg-white px-4 py-1 rounded-full border border-gray-200 font-bold text-gray-700">3
-                                + 2</span>
-                            <span
-                                class="bg-white px-4 py-1 rounded-full border border-gray-200 font-bold text-gray-700">3
-                                + 3</span>
+                                class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full uppercase">Elite
+                                Living</span>
                         </div>
-                        <p class="text-gray-600 mt-4 text-sm font-medium">Create your expansive family sanctuary by
-                            combining premium units.</p>
-                        <button onclick="openPopup()"
-                            class="animated-gradient-button text-white px-8 py-2 rounded-lg font-semibold mt-4">Enquire
-                            Jodi Price</button>
+                        <h3 class="text-2xl font-bold text-navy mb-2">Premium 4 BHK Residence</h3>
+                        <p class="text-gray-500 text-sm mb-6">The pinnacle of luxury in Kandivali East.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="maximize" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>1500 - 1650 sq.ft</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-gold"></i>
+                                <span>Exclusive Layout</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="text-gray-400 text-sm mb-1 uppercase tracking-wider">Starting From</p>
+                            <p class="text-3xl font-bold text-navy">₹ 4.50 Cr*</p>
+                        </div>
+                        <button onclick="openPopup('Price List 4 BHK')"
+                            class="animated-gradient-button w-full text-white py-4 rounded-2xl font-bold shadow-lg shadow-accent/20 group-hover:scale-105 transition-all duration-300">
+                            Check Details
+                        </button>
                     </div>
-
-                    <!-- Retail -->
-                    <div
-                        class="bg-[#FFF9F2] rounded-2xl shadow-md border border-orange-200 hover:shadow-xl transition-all p-6 text-center">
-                        <h3 class="text-xl font-bold text-orange-700 uppercase italic">Retail Spaces</h3>
-                        <p class="text-gray-600 mt-1">Area: <span class="font-semibold">350 - 1000 sq.ft</span></p>
-                        <p class="text-[#C9211A] font-bold mt-3 uppercase italic">Price on Request</p>
-                        <button onclick="openPopup()"
-                            class="animated-gradient-button text-white px-5 py-2 rounded-lg font-semibold mt-4 w-full uppercase">Enquire
-                            Now</button>
-                    </div>
-
                 </div>
 
-                <div
-                    class="max-w-4xl mx-auto mt-12 bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-dashed border-[#DD052B] text-center">
-                    <p class="text-gray-800 font-medium italic">All units include a dedicated dry area. Few selected
-                        units feature a <span class="text-[#C9211A] font-bold underline">walk-in closet</span>.</p>
+                <!-- Jodi Units Notice -->
+                <div class="mt-16 text-center reveal" style="transition-delay: 400ms">
+                    <p class="text-gray-500 font-medium mb-4 italic">Looking for even more space?</p>
+                    <div
+                        class="inline-flex flex-col md:flex-row items-center gap-4 bg-navy/5 px-8 py-6 rounded-3xl border border-navy/10 max-w-2xl mx-auto shadow-sm">
+                        <span class="w-14 h-14 bg-gold/20 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="layout-grid" class="text-gold w-8 h-8"></i>
+                        </span>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-bold text-navy text-lg">Exclusive Jodi Options</h4>
+                            <p class="text-sm text-gray-600">Combine multiple units to create a sprawling residence
+                                tailored to your lifestyle.</p>
+                        </div>
+                        <button onclick="openPopup('Jodi Units')"
+                            class="animated-gradient-button text-white px-6 py-3 rounded-xl font-bold text-sm whitespace-nowrap">
+                            Get Details
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -682,7 +750,7 @@
                         <!-- Master Plan -->
                         <div class="relative group overflow-hidden rounded-2xl shadow-xl border border-gray-100">
                             <div class="aspect-[4/3] overflow-hidden">
-                                <img src="assets/banner.png" alt="Master Plan Preview"
+                                <img src="assets/banner-1.webp" alt="Master Plan Preview"
                                     class="w-full h-full object-cover blur-md group-hover:blur-sm transition-all duration-500 scale-105">
                             </div>
                             <div
@@ -713,8 +781,86 @@
                     </div>
                 </div>
 
+                <!-- FAQ Section -->
+                <section id="faq" class="py-20 bg-gray-50">
+                    <div class="container mx-auto px-4 max-w-4xl">
+                        <div class="text-center mb-12">
+                            <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">Frequently Asked
+                                Questions</h2>
+                            <div class="w-20 h-1 bg-gold mx-auto"></div>
+                        </div>
 
+                        <div class="space-y-4">
+                            <!-- FAQ 1 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <button onclick="toggleFaq(1)"
+                                    class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors">
+                                    <span class="font-bold text-navy">Is Kandivali East a good place to buy a flat in
+                                        2026?</span>
+                                    <i data-lucide="chevron-down" id="faq-icon-1"
+                                        class="w-5 h-5 text-gold transition-transform"></i>
+                                </button>
+                                <div id="faq-content-1"
+                                    class="hidden p-5 border-t border-gray-100 text-gray-600 leading-relaxed">
+                                    Yes, Kandivali East is one of the fastest-growing residential hubs in Mumbai. With
+                                    the upcoming Metro Line 7 and improved infrastructure, it offers excellent
+                                    appreciation potential and a premium lifestyle, making it a top choice for
+                                    homebuyers in 2026.
+                                </div>
+                            </div>
 
+                            <!-- FAQ 2 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <button onclick="toggleFaq(2)"
+                                    class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors">
+                                    <span class="font-bold text-navy">How far is Mahindra Vista from Western Express
+                                        Highway?</span>
+                                    <i data-lucide="chevron-down" id="faq-icon-2"
+                                        class="w-5 h-5 text-gold transition-transform"></i>
+                                </button>
+                                <div id="faq-content-2"
+                                    class="hidden p-5 border-t border-gray-100 text-gray-600 leading-relaxed">
+                                    Mahindra Vista is strategically located just 5-7 minutes away from the Western
+                                    Express Highway, providing seamless connectivity to Borivali, Andheri, and South
+                                    Mumbai.
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <button onclick="toggleFaq(3)"
+                                    class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors">
+                                    <span class="font-bold text-navy">What is the RERA number for Mahindra Vista Phase 1
+                                        & 2?</span>
+                                    <i data-lucide="chevron-down" id="faq-icon-3"
+                                        class="w-5 h-5 text-gold transition-transform"></i>
+                                </button>
+                                <div id="faq-content-3"
+                                    class="hidden p-5 border-t border-gray-100 text-gray-600 leading-relaxed">
+                                    Mahindra Vista is a MahaRERA registered project. Phase 1 RERA No: P51800054671 |
+                                    Phase 2 RERA No: P51800079147.
+                                </div>
+                            </div>
+
+                            <!-- FAQ 4 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <button onclick="toggleFaq(4)"
+                                    class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors">
+                                    <span class="font-bold text-navy">Best premium gated community apartments for sale
+                                        in Kandivali.</span>
+                                    <i data-lucide="chevron-down" id="faq-icon-4"
+                                        class="w-5 h-5 text-gold transition-transform"></i>
+                                </button>
+                                <div id="faq-content-4"
+                                    class="hidden p-5 border-t border-gray-100 text-gray-600 leading-relaxed">
+                                    Mahindra Vista stands out as one of the best premium gated communities in Kandivali,
+                                    offering 2, 3 & 4 BHK residences with 35+ modern amenities, wide-open spaces, and a
+                                    nature-inspired design.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Popup Overlay -->
 
@@ -769,7 +915,7 @@
                         </div>
 
                         <!-- WhatsApp Button -->
-                        <a href="https://wa.me/919309220655" target="_blank"
+                        <a href="https://wa.me/919820615020" target="_blank"
                             class="w-full flex items-center justify-center bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor"
                                 viewBox="0 0 24 24">
@@ -795,10 +941,10 @@
 
 
         <!-- Amenities Section -->
-        <section id="amenities" class="py-20 bg-white">
+        <section id="amenities" class="py-20 bg-white reveal">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Mahindra Rainforest
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Mahindra Vista
                         Amenities</h2>
                     <p class="text-xl text-gray-600 font-body">Elevate your lifestyle with premium facilities</p>
                 </div>
@@ -905,46 +1051,33 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="py-20 bg-navy">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Mahindra Rainforest
-                        Project
-                        Gallery</h2>
-                    <p class="text-xl text-gray-800 font-body">Experience the luxury through our curated collection</p>
+        <section id="gallery" class="py-24 bg-navy relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -ml-32 -mt-32"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16 section-reveal">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+                        Project <span class="text-gold">Gallery</span>
+                    </h2>
+                    <p class="text-xl text-gray-400 font-body max-w-2xl mx-auto">
+                        Experience the luxury through our curated collection of architectural excellence and premium interiors.
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <div class="gallery-item cursor-pointer group" onclick="openLightbox(0)">
-                        <img src="assets/gallery1.jpg" alt="Exterior View"
+                        <img src="assets/banner-1.webp" alt="Exterior View"
                             class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="gallery-item cursor-pointer group" onclick="openLightbox(1)">
-                        <img src="assets/gallery2.jpg" alt="Living Room"
+                        <img src="assets/banner-2.webp" alt="Living Room"
                             class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="gallery-item cursor-pointer group" onclick="openLightbox(2)">
-                        <img src="assets/gallery3.png" alt="Bedroom"
+                        <img src="assets/banner-3.webp" alt="Bedroom"
                             class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="gallery-item cursor-pointer group" onclick="openLightbox(3)">
-                        <img src="assets/gallery4.jpg" alt="Kitchen"
-                            class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="gallery-item cursor-pointer group" onclick="openLightbox(4)">
-                        <img src="assets/gallery5.jpg" alt="Swimming Pool"
-                            class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="gallery-item cursor-pointer group" onclick="openLightbox(5)">
-                        <img src="assets/gallery6.jpg" alt="Gym"
-                            class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="gallery-item cursor-pointer group" onclick="openLightbox(6)">
-                        <img src="assets/gallery7.jpg" alt="Balcony View"
-                            class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="gallery-item cursor-pointer group" onclick="openLightbox(7)">
-                        <img src="assets/gallery8.jpg" alt="Night View"
+                        <img src="assets/banner-4.webp" alt="Kitchen"
                             class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
                     </div>
                 </div>
@@ -960,85 +1093,111 @@
 
 
         <!-- Location Section -->
-        <section id="location" class="bg-[#FAF3E0] py-16 relative">
-            <div class="container mx-auto px-6 lg:px-12">
-                <!-- Title -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-[#C9211A]">
-                        Mahindra Rainforest <span class="text-amber-500">Kanjur - Bhandup*</span>
+        <section id="location" class="bg-navy py-24 relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16 section-reveal">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+                        Strategic <span class="text-gold">Connectivity</span>
                     </h2>
-                    <p class="text-gray-900 mt-3 text-lg font-body">
-                        Strategically located in the heart of Kanjur - Bhandup* with excellent connectivity
+                    <p class="text-xl text-gray-400 font-body max-w-2xl mx-auto">
+                        Located in the heart of Kandivali East, offering seamless access to Mumbai's primary hubs.
                     </p>
                 </div>
 
-                <!-- Grid -->
-                <div class="grid md:grid-cols-2 gap-10 items-center">
-
-                    <!-- Left: Key Distances -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Connectivity Cards -->
                     <div class="space-y-6">
-                        <h3 class="text-xl font-semibold text-amber-500">Key Distances</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <!-- Transit -->
+                            <div class="glass-card-dark p-6 rounded-2xl section-reveal" style="transition-delay: 100ms;">
+                                <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-lucide="train" class="text-gold w-6 h-6"></i>
+                                </div>
+                                <h4 class="text-white font-bold mb-3">Transit Hubs</h4>
+                                <ul class="space-y-2 text-sm text-gray-200">
+                                    <li class="flex justify-between"><span class="text-white">WEH</span> <span
+                                            class="text-gold font-semibold">1 Min</span></li>
+                                    <li class="flex justify-between"><span class="text-white">Akurli Metro</span> <span
+                                            class="text-gold font-semibold">2 Mins</span></li>
+                                    <li class="flex justify-between"><span class="text-white">Kandivali Stn</span> <span
+                                            class="text-gold font-semibold">5 Mins</span></li>
+                                </ul>
+                            </div>
 
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-road"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">Eastern Express Highway
-                                    <span class="text-gray-900 font-normal">- 3 minutes</span>
-                                </p>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-train"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">Kanjur - Bhandup* Railway Station
-                                    <span class="text-gray-900 font-normal">- 5 minutes</span>
-                                </p>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-subway"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">Upcoming Metro Line 4
-                                    <span class="text-gray-900 font-normal">- 7 minutes</span>
-                                </p>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-hospital"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">Hiranandani Hospital Powai
-                                    <span class="text-gray-900 font-normal">- 15 minutes</span>
-                                </p>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-university"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">R City Mall, Ghatkopar
-                                    <span class="text-gray-900 font-normal">- 15 minutes</span>
-                                </p>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="bg-amber-500 text-white p-2 rounded-full">
-                                    <i class="fas fa-building"></i>
-                                </span>
-                                <p class="text-[#C9211A] font-medium">Phoenix Marketcity Kurla
-                                    <span class="text-gray-900 font-normal">- 20 minutes</span>
-                                </p>
-                            </li>
-                        </ul>
+                            <!-- Education -->
+                            <div class="glass-card-dark p-6 rounded-2xl section-reveal" style="transition-delay: 200ms;">
+                                <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-lucide="graduation-cap" class="text-accent w-6 h-6"></i>
+                                </div>
+                                <h4 class="text-white font-bold mb-3">Education</h4>
+                                <ul class="space-y-2 text-sm text-gray-300">
+                                    <li class="flex justify-between"><span>Thakur College</span> <span
+                                            class="text-gold font-semibold">5 Mins</span></li>
+                                    <li class="flex justify-between"><span>Cambridge School</span> <span
+                                            class="text-gold font-semibold">8 Mins</span></li>
+                                    <li class="flex justify-between"><span>Ryan Intl.</span> <span
+                                            class="text-gold font-semibold">10 Mins</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Healthcare -->
+                            <div class="glass-card-dark p-6 rounded-2xl section-reveal" style="transition-delay: 300ms;">
+                                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-lucide="hospital" class="text-blue-400 w-6 h-6"></i>
+                                </div>
+                                <h4 class="text-white font-bold mb-3">Healthcare</h4>
+                                <ul class="space-y-2 text-sm text-gray-300">
+                                    <li class="flex justify-between"><span>SevenHills</span> <span
+                                            class="text-gold font-semibold">15 Mins</span></li>
+                                    <li class="flex justify-between"><span>Sanjeevani</span> <span
+                                            class="text-gold font-semibold">5 Mins</span></li>
+                                    <li class="flex justify-between"><span>DNA Hospital</span> <span
+                                            class="text-gold font-semibold">8 Mins</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Lifestyle -->
+                            <div class="glass-card-dark p-6 rounded-2xl section-reveal" style="transition-delay: 400ms;">
+                                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-lucide="shopping-bag" class="text-green-400 w-6 h-6"></i>
+                                </div>
+                                <h4 class="text-white font-bold mb-3">Lifestyle</h4>
+                                <ul class="space-y-2 text-sm text-gray-300">
+                                    <li class="flex justify-between"><span>Growel's 101</span> <span
+                                            class="text-gold font-semibold">2 Mins</span></li>
+                                    <li class="flex justify-between"><span>Oberoi Mall</span> <span
+                                            class="text-gold font-semibold">12 Mins</span></li>
+                                    <li class="flex justify-between"><span>SG National Park</span> <span
+                                            class="text-gold font-semibold">5 Mins</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <button onclick="openPopup('Request Location Map')"
+                                class="animated-gradient-button w-full sm:w-auto text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 group">
+                                <i data-lucide="map-pin" class="w-5 h-5 group-hover:animate-bounce"></i>
+                                Download Location Map
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Right: Google Map -->
-                    <div class="rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30156.20604707011!2d72.92524!3d19.12845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c796a6debb4f%3A0xabf0cceebcf69f62!2sMahindra%20Lifespaces%20Bhandup!5e0!3m2!1sen!2sin!4v1775473561085!5m2!1sen!2sin"
-                            width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="relative section-reveal" style="transition-delay: 500ms;">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-gold to-accent rounded-3xl blur opacity-25">
+                        </div>
+                        <div class="relative bg-navy rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.182470701146!2d72.868744!3d19.201234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b738e4a7b7a1%3A0x8f8c8c8c8c8c8c8c!2sMahindra%20Lifespaces%20Vista!5e0!3m2!1sen!2sin!4v1715473561085!5m2!1sen!2sin"
+                                width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="grayscale hover:grayscale-0 transition-all duration-700"></iframe>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1211,7 +1370,6 @@
                         </button>
                         <!-- Title -->
                         <h3 class="text-2xl sm:text-3xl font-semibold text-white mt-4">Virtual Site Visit</h3>
-                        <p class="text-white text-sm sm:text-base mt-1">Kanjur - Bhandup*</p>
                     </div>
                 </div>
             </div>
@@ -1252,176 +1410,510 @@
                 </div>
             </div>
         </section>
-
-        <!-- FOOTER -->
-        <footer class="bg-[#FAF3E0] text-black py-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    <!-- Column 1 -->
-                    <div>
-                        <a href="#hero" class="flex items-center">
-                            <img src="assets/logo.png" alt="Mahindra logo" class="h-14 w-auto object-contain" />
-                        </a>
-                         <p class="text-white text-lg md:text-xl font-medium tracking-wide drop-shadow-lg mb-2">
-                    Premium 2, 3 & 4 BHK apartments in Kandivali East
-                </p>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl">
-                    Mahindra <span class="text-secondary">Vista</span>
-                </h1>
-                <p class="text-xl text-white/95 mb-8 max-w-2xl mx-auto font-medium drop-shadow-lg leading-relaxed">
-                    Off Western Express Highway, Akurli Road, Kandivali East
-                </p>
-
-                <!-- Key Project Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
-                        <p class="text-secondary font-bold text-lg">3.53 Acres</p>
-                        <p class="text-white text-xs uppercase tracking-wider">Spread Across</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
-                        <p class="text-secondary font-bold text-lg">₹ 1.65 Cr*</p>
-                        <p class="text-white text-xs uppercase tracking-wider">Starting Price</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
-                        <p class="text-secondary font-bold text-lg">G+35 Storeys</p>
-                        <p class="text-white text-xs uppercase tracking-wider">Structure</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
-                        <p class="text-secondary font-bold text-lg">Available</p>
-                        <p class="text-white text-xs uppercase tracking-wider">Jodi Options</p>
-                    </div>
-                </div> </div>
-                </div>                   Mahindra Group.
-                        </p>
-                        <p class="text-gray-800">
-                            <strong>Possession:</strong> December 2029 *
-                        </p>
-                    </div>
-
-                    <!-- Column 2 -->
-                    <div>
-                        <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-                        <ul class="space-y-2 text-gray-800">
-                            <li><a href="#overview" class="hover:text-accent transition">Overview</a></li>
-                            <li><a href="#amenities" class="hover:text-accent transition">Amenities</a></li>
-                            <li><a href="#floor-plans" class="hover:text-accent transition">Floor Plans</a></li>
-                            <li><a href="#location" class="hover:text-accent transition">Location</a></li>
-
-                        </ul>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div>
-                        <h4 class="font-semibold text-lg mb-4">Contact Information</h4>
-                        <ul class="space-y-3 text-gray-800">
-                            <li class="flex items-start">
-                                <span class="mr-2">📞</span>
-                                <a href="tel:+91 98206 15020" class="hover:text-accent transition">+91 98206 15020</a>
-                            </li>
-
-                            <li class="flex items-start">
-                                <span class="mr-2">📍</span>
-                                <span>LBS Marg, Kanjur - Bhandup*</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">🔖</span>
-                                <div>
-                                    <p>RERA No. PR1181012502956 | PM1181012502957</p>
-                                    <div class="flex gap-4 mt-3">
-                                        <img src="assets/ReraQR-1.png" alt="RERA QR 1"
-                                            class="w-20 h-20 object-contain bg-white p-1 rounded shadow-sm" />
-                                        <img src="assets/ReraQR-2.png" alt="RERA QR 2"
-                                            class="w-20 h-20 object-contain bg-white p-1 rounded shadow-sm" />
-                                    </div>
-                                </div>
-                            </li>
-
-                            </li>
-                        </ul>
-                    </div>
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C9211A] mb-4">Frequently Asked Questions</h2>
+                    <p class="text-gray-600 text-lg">Clear your doubts with our most common queries</p>
                 </div>
-
-                <div class="border-t border-gray-800 pt-8">
-                    <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-                        <p class="mb-4 md:mb-0">
-                            © 2025 Mahindra Rainforest Kanjur - Bhandup*. All rights reserved.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="privacy.html" class="hover:text-accent transition">Privacy Policy</a>
-                            <span>•</span>
-                            <a href="terms.html" class="hover:text-accent transition">Terms & Conditions</a>
-                            <span>•</span>
-                            <a href="sitemap.xml" class="hover:text-accent transition">Sitemap</a>
-
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button
+                            class="w-full flex justify-between items-center p-5 bg-gray-50 text-left font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+                            onclick="toggleFaq(1)">
+                            <span>Is Kandivali East a good place to buy a flat in 2026?</span>
+                            <i id="faq-icon-1" class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-answer-1" class="hidden p-5 text-gray-600 border-t bg-white">
+                            Yes, Kandivali East is one of the most sought-after residential hubs in Mumbai. With its
+                            proximity to the Western Express Highway, Akurli Metro Station, and excellent social
+                            infrastructure including malls, schools, and hospitals, it offers a premium lifestyle and
+                            high appreciation potential.
                         </div>
                     </div>
-                    <p class="text-gray-700 text-xs mt-4 text-center">
-                        *Disclaimer: The information provided on this website is for informational purposes only and
-                        does not constitute professional advice, an offer to sell or lease any property, or a
-                        solicitation to buy or lease any property. This site is managed by a RERA registered Real Estate
-                        Agent Firm Namely Bricksbazar Realty LLP (Registered Agent Firm bearing RERA no. A51800029418).
-                        While we strive to provide accurate and up-to-date information, we cannot guarantee its
-                        completeness, accuracy, or reliability. pricing is subject to change and property availability
-                        cannot be guaranteed. Images are for representational purposes only and may not reflect the
-                        actual properties. We may share your data with Real Estate Regulatory Authority (RERA)
-                        registered Developers for further processing as necessary. Additionally, we may send updates and
-                        information to the mobile number or email address registered with us. All rights reserved. You
-                        should always conduct your own independent research and due diligence before making any
-                        decisions based on the information presented here.
-                    </p>
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button
+                            class="w-full flex justify-between items-center p-5 bg-gray-50 text-left font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+                            onclick="toggleFaq(2)">
+                            <span>How far is Mahindra Vista from Western Express Highway?</span>
+                            <i id="faq-icon-2" class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-answer-2" class="hidden p-5 text-gray-600 border-t bg-white">
+                            Mahindra Vista is strategically located just 1 minute away from the Western Express Highway,
+                            providing seamless connectivity to the rest of Mumbai.
+                        </div>
+                    </div>
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button
+                            class="w-full flex justify-between items-center p-5 bg-gray-50 text-left font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+                            onclick="toggleFaq(3)">
+                            <span>What is the RERA number for Mahindra Vista Phase 1 & 2?</span>
+                            <i id="faq-icon-3" class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-answer-3" class="hidden p-5 text-gray-600 border-t bg-white">
+                            The MahaRERA registration numbers are: Mahindra Vista Phase 1 - P51800054671 and Mahindra
+                            Vista Phase 2 - P51800079147.
+                        </div>
+                    </div>
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button
+                            class="w-full flex justify-between items-center p-5 bg-gray-50 text-left font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+                            onclick="toggleFaq(4)">
+                            <span>What are the configurations available in Mahindra Vista?</span>
+                            <i id="faq-icon-4" class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-answer-4" class="hidden p-5 text-gray-600 border-t bg-white">
+                            Mahindra Vista offers luxurious 2, 3, and 4 BHK premium residences with spacious balconies
+                            and dedicated dry areas. Jodi options are also available for larger families.
+                        </div>
+                    </div>
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button
+                            class="w-full flex justify-between items-center p-5 bg-gray-50 text-left font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+                            onclick="toggleFaq(5)">
+                            <span>Best premium gated community apartments for sale in Kandivali?</span>
+                            <i id="faq-icon-5" class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-answer-5" class="hidden p-5 text-gray-600 border-t bg-white">
+                            Mahindra Vista is considered one of the best premium gated community apartments for sale in
+                            Kandivali East, offering an expansive 37-acre township experience, massive 65,000 sq. ft.
+                            clubhouse, and over 3.5 lakh sq. ft. of world-class amenities.
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <!-- Sticky Footer CTA -->
-        <div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-200 p-4 z-40 md:hidden">
-            <div class="flex space-x-3">
-                <a href="tel:+919309220655"
-                    class="flex-1 bg-white hover:bg-navy-800 text-[#C9211A] py-3 rounded-lg text-center font-medium transition-all duration-200 flex items-center justify-center space-x-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    <span>Call Now</span>
-                </a>
-                <a href="https://wa.me/919309220655"
-                    class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-medium transition-all duration-200 flex items-center justify-center space-x-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.488" />
-                    </svg>
-                    <span>WhatsApp</span>
-                </a>
+            <!-- Contact Us Section -->
+            <section id="contact" class="py-24 bg-navy relative overflow-hidden">
+                <div class="container mx-auto px-4 relative z-10">
+                    <div
+                        class="max-w-6xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                        <!-- Contact Info Sidebar -->
+                        <div class="lg:w-1/3 bg-gold p-12 text-navy flex flex-col justify-between">
+                            <div>
+                                <h1 class="font-heading text-4xl font-bold mb-6">Get in Touch</h1>
+                                <p class="text-navy/80 mb-12">Experience the future of luxury living. Visit us today or
+                                    schedule a virtual consultation.</p>
+
+                                <!-- FAQ Section -->
+                                <section id="faq" class="py-20 bg-gray-50">
+                                    <div class="container mx-auto px-4">
+                                        <div class="text-center mb-16 reveal">
+                                            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">Frequently
+                                                Asked Questions</h2>
+                                            <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions
+                                                about Mahindra Vista Kandivali East.</p>
+                                        </div>
+
+                                        <div class="max-w-3xl mx-auto space-y-4 reveal">
+                                            <!-- FAQ 1 -->
+                                            <div
+                                                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                                                <button
+                                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                                    onclick="toggleFaq(1)">
+                                                    <span class="font-bold text-gray-800">Where is Mahindra Vista
+                                                        located?</span>
+                                                    <i data-lucide="chevron-down" id="faq-icon-1"
+                                                        class="text-accent w-6 h-6 transition-transform duration-300"></i>
+                                                </button>
+                                                <div id="faq-content-1"
+                                                    class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                                                    Mahindra Vista is located in Kandivali East, Mumbai, near the
+                                                    Western Express Highway, providing excellent connectivity.
+                                                </div>
+                                            </div>
+
+                                            <!-- FAQ 2 -->
+                                            <div
+                                                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                                                <button
+                                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                                    onclick="toggleFaq(2)">
+                                                    <span class="font-bold text-gray-800">What types of apartments are
+                                                        available?</span>
+                                                    <i data-lucide="chevron-down" id="faq-icon-2"
+                                                        class="text-accent w-6 h-6 transition-transform duration-300"></i>
+                                                </button>
+                                                <div id="faq-content-2"
+                                                    class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                                                    The project offers premium 1, 2, 3, and 4 BHK residences with modern
+                                                    layouts and high-end finishes.
+                                                </div>
+                                            </div>
+
+                                            <!-- FAQ 3 -->
+                                            <div
+                                                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                                                <button
+                                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                                    onclick="toggleFaq(3)">
+                                                    <span class="font-bold text-gray-800">What is the project
+                                                        area?</span>
+                                                    <i data-lucide="chevron-down" id="faq-icon-3"
+                                                        class="text-accent w-6 h-6 transition-transform duration-300"></i>
+                                                </button>
+                                                <div id="faq-content-3"
+                                                    class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                                                    Mahindra Vista is spread across a sprawling 3.53-acre land parcel
+                                                    with ample open spaces and greenery.
+                                                </div>
+                                            </div>
+
+                                            <!-- FAQ 4 -->
+                                            <div
+                                                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                                                <button
+                                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                                    onclick="toggleFaq(4)">
+                                                    <span class="font-bold text-gray-800">When is the expected
+                                                        possession?</span>
+                                                    <i data-lucide="chevron-down" id="faq-icon-4"
+                                                        class="text-accent w-6 h-6 transition-transform duration-300"></i>
+                                                </button>
+                                                <div id="faq-content-4"
+                                                    class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                                                    The expected possession date for Mahindra Vista is December 2028.
+                                                </div>
+                                            </div>
+
+                                            <!-- FAQ 5 -->
+                                            <div
+                                                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                                                <button
+                                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                                    onclick="toggleFaq(5)">
+                                                    <span class="font-bold text-gray-800">Who is the developer?</span>
+                                                    <i data-lucide="chevron-down" id="faq-icon-5"
+                                                        class="text-accent w-6 h-6 transition-transform duration-300"></i>
+                                                </button>
+                                                <div id="faq-content-5"
+                                                    class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                                                    The project is being developed by Mahindra Lifespaces, the real
+                                                    estate development arm of the Mahindra Group.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <footer class="bg-gray-100 text-gray-900 pt-20 pb-10 border-t border-gray-200">
+                                    <p class="text-[13px] text-gray-600 leading-relaxed text-center">
+                                        Premium 2, 3 & 4 BHK Residential Development spread across <strong>3.53
+                                            Acres</strong> of lush greenery.
+                                        Inspired by Sanjay Gandhi National Park with Climate-Responsive Net Zero Energy
+                                        Architecture.
+                                    </p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-navy/10 rounded-full flex items-center justify-center mr-4">
+                                        <i data-lucide="phone" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold uppercase tracking-wider text-navy/60">Phone</p>
+                                        <a href="tel:+919309220655" class="text-lg font-bold">+91 9309220655</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-navy/10 rounded-full flex items-center justify-center mr-4">
+                                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold uppercase tracking-wider text-navy/60">Site Address
+                                        </p>
+                                        <p class="text-lg font-bold leading-tight">Off Western Express Highway,
+                                            Kandivali East</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12">
+                            <p class="text-sm font-bold uppercase tracking-wider text-navy/60 mb-4">Connect With Us</p>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center hover:bg-navy hover:text-white transition-all"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center hover:bg-navy hover:text-white transition-all"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center hover:bg-navy hover:text-white transition-all"><i
+                                        class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:w-2/3 p-12 bg-white">
+                        <h3 class="text-3xl font-bold text-navy mb-8">Register for Site Visit</h3>
+                        <form action="sendmail.php" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                                    <input type="text" name="name" required placeholder="John Doe"
+                                        class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 ml-1">Phone Number</label>
+                                    <input type="tel" name="phone" required placeholder="+91 00000 00000"
+                                        class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                                <input type="email" name="email" required placeholder="john@example.com"
+                                    class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 ml-1">Interested Configuration</label>
+                                <select name="config"
+                                    class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all">
+                                    <option value="1 BHK">1 BHK Residence</option>
+                                    <option value="2 BHK">2 BHK Residence</option>
+                                    <option value="3 BHK">3 BHK Residence</option>
+                                    <option value="4 BHK">4 BHK Residence</option>
+                                    <option value="Jodi Unit">Jodi Unit</option>
+                                </select>
+                            </div>
+                            <div class="pt-4">
+                                <button type="submit"
+                                    class="animated-gradient-button w-full text-white py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+                                    Submit Registration
+                                </button>
+                                <p class="text-center text-gray-400 text-xs mt-4">By submitting, you agree to our
+                                    privacy policy and terms of service.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <script>
+                function toggleFaq(id) {
+                    const answer = document.getElementById(`faq-answer-${id}`);
+                    const icon = document.getElementById(`faq-icon-${id}`);
+                    const allAnswers = document.querySelectorAll('[id^="faq-answer-"]');
+                    const allIcons = document.querySelectorAll('[id^="faq-icon-"]');
+
+                    allAnswers.forEach((ans, index) => {
+                        if (index + 1 !== id) {
+                            ans.classList.add('hidden');
+                            allIcons[index].classList.remove('rotate-45');
+                        }
+                    });
+
+                    answer.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-45');
+                }
+            </script>
+
+            <!-- FOOTER -->
+            <footer class="bg-[#FAF3E0] text-black py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <!-- Column 1 -->
+                        <div>
+                            <a href="#hero" class="flex items-center mb-6">
+                                <img src="assets/logo.png" alt="Mahindra logo" class="h-14 w-auto object-contain" />
+                            </a>
+                            <p class="text-gray-800 mb-4">
+                                Mahindra Vista Kandivali East is a premium residential project by Mahindra Lifespaces,
+                                offering a blend of
+                                luxury and nature.
+                            </p>
+                            <p class="text-gray-800">
+                                <strong>Possession:</strong> December 2029 *
+                            </p>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                            <ul class="space-y-2 text-gray-800">
+                                <li><a href="#overview" class="hover:text-accent transition">Overview</a></li>
+                                <li><a href="#amenities" class="hover:text-accent transition">Amenities</a></li>
+                                <li><a href="#floor-plans" class="hover:text-accent transition">Floor Plans</a></li>
+                                <li><a href="#location" class="hover:text-accent transition">Location</a></li>
+                                <li><a href="#faq" class="hover:text-accent transition">FAQ</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4">Contact Information</h4>
+                            <ul class="space-y-3 text-gray-800">
+                                <li class="flex items-start">
+                                    <span class="mr-2">📞</span>
+                                    <a href="tel:+91 9309220655" class="hover:text-accent transition">+91 9309220655</a>
+                                </li>
+
+                                <li class="flex items-start">
+                                    <span class="mr-2">📍</span>
+                                    <span>Off Western Express Highway, Akurli Road, Kandivali East</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">🔖</span>
+                                    <div>
+                                        <p class="text-xs mb-1">MahaRERA Registration No: P51800054671 (Phase 1) |
+                                            P51800079147 (Phase 2)</p>
+                                        <div class="flex gap-4 mt-3">
+                                            <img src="assets/ReraQR-1.png" alt="RERA QR 1"
+                                                class="w-20 h-20 object-contain bg-white p-1 rounded shadow-sm" />
+                                            <img src="assets/ReraQR-2.png" alt="RERA QR 2"
+                                                class="w-20 h-20 object-contain bg-white p-1 rounded shadow-sm" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-800 pt-8">
+                        <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                            <p class="mb-4 md:mb-0">
+                                © 2025 Mahindra Vista Kandivali East. All rights reserved.
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="privacy.html" class="hover:text-accent transition">Privacy Policy</a>
+                                <span>•</span>
+                                <a href="terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+                                <span>•</span>
+                                <a href="sitemap.xml" class="hover:text-accent transition">Sitemap</a>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-xs mt-4 text-center">
+                            *Disclaimer: The information provided on this website is for informational purposes only and
+                            does not constitute professional advice, an offer to sell or lease any property, or a
+                            solicitation to buy or lease any property. This site is managed by a RERA registered Real
+                            Estate
+                            Agent Firm Namely Bricksbazar Realty LLP (Registered Agent Firm bearing RERA no.
+                            A51800029418).
+                            While we strive to provide accurate and up-to-date information, we cannot guarantee its
+                            completeness, accuracy, or reliability. pricing is subject to change and property
+                            availability
+                            cannot be guaranteed. Images are for representational purposes only and may not reflect the
+                            actual properties. We may share your data with Real Estate Regulatory Authority (RERA)
+                            registered Developers for further processing as necessary. Additionally, we may send updates
+                            and
+                            information to the mobile number or email address registered with us. All rights reserved.
+                            You
+                            should always conduct your own independent research and due diligence before making any
+                            decisions based on the information presented here.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <!-- Sticky Footer CTA -->
+            <div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-200 p-4 z-40 md:hidden">
+                <div class="flex space-x-3">
+                    <a href="tel:+919309220655"
+                        class="flex-1 bg-white hover:bg-navy-800 text-[#C9211A] py-3 rounded-lg text-center font-medium transition-all duration-200 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        <span>Call Now</span>
+                    </a>
+                    <a href="https://wa.me/919309220655"
+                        class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-medium transition-all duration-200 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.488" />
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
             </div>
-        </div>
 
 
-        <!-- STICKY ENQUIRY BUTTON (Desktop Only) -->
-        <a href="tel:+919309220655"
-            class="hidden lg:flex fixed bottom-6 right-6 z-40 bg-accent hover:bg-yellow-600 text-white w-16 h-16 rounded-full shadow-2xl items-center justify-center text-2xl transform hover:scale-110 transition">
-            📞
-        </a>
+            <!-- STICKY ENQUIRY BUTTON (Desktop Only) -->
+            <a href="tel:+919309220655"
+                class="hidden lg:flex fixed bottom-6 right-6 z-40 bg-accent hover:bg-yellow-600 text-white w-16 h-16 rounded-full shadow-2xl items-center justify-center text-2xl transform hover:scale-110 transition">
+                📞
+            </a>
 
 
 
-        <!-- JavaScript -->
-        <script>
-            // Initialize Lucide icons
-            lucide.createIcons();
-        </script>
-        <script>
-            function openPopup() {
-                document.getElementById('popupOverlay').classList.remove('hidden');
-            }
+            <!-- JavaScript -->
+            <script>
+                // Initialize Lucide icons
+                lucide.createIcons();
 
-            function closePopup() {
-                document.getElementById('popupOverlay').classList.add('hidden');
-            }
+                // Reveal Animations on Scroll
+                const revealOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px"
+                };
 
-            // Auto-popup after 5 seconds
-            setTimeout(() => {
-                openPopup();
-            }, 5000);
-        </script>
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            // Optional: unobserve after reveal
+                            // revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, revealOptions);
+
+                document.querySelectorAll('.reveal, .section-reveal').forEach(el => {
+                    revealObserver.observe(el);
+                });
+
+                // Smooth Scrolling for all anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        const href = this.getAttribute('href');
+                        if (href !== '#') {
+                            e.preventDefault();
+                            const target = document.querySelector(href);
+                            if (target) {
+                                window.scrollTo({
+                                    top: target.offsetTop - 80, // Adjust for fixed header
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
+
+                function openPopup(context = 'General Enquiry') {
+                    document.getElementById('popupOverlay').classList.remove('hidden');
+                    // You could dynamically update popup title based on context if needed
+                    console.log('Opening popup for:', context);
+                }
+
+                function closePopup() {
+                    document.getElementById('popupOverlay').classList.add('hidden');
+                }
+
+                function toggleFaq(index) {
+                    const content = document.getElementById(`faq-content-${index}`);
+                    const icon = document.getElementById(`faq-icon-${index}`);
+                    const isHidden = content.classList.contains('hidden');
+
+                    // Close all other FAQs (optional, but cleaner)
+                    document.querySelectorAll('[id^="faq-content-"]').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.classList.remove('rotate-180'));
+
+                    if (isHidden) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    }
+                }
+
+                // Auto-popup after 10 seconds (slightly longer to let user read first)
+                setTimeout(() => {
+                    if (document.getElementById('popupOverlay').classList.contains('hidden')) {
+                        openPopup('Automated Engagement');
+                    }
+                }, 10000);
+            </script>
 
 </body>
 

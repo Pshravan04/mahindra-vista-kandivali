@@ -14,13 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name  = trim(strip_tags($_POST['name']  ?? ''));
     $email = trim(strip_tags($_POST['email'] ?? ''));
-    $phone = trim(strip_tags($_POST['phone'] ?? ''));
+    $country_code = trim(strip_tags($_POST['country_code'] ?? ''));
+    $phone_num    = trim(strip_tags($_POST['phone'] ?? ''));
+    $phone = $country_code . ' ' . $phone_num;
+    $config = trim(strip_tags($_POST['config'] ?? 'Not Specified'));
 
     $name  = substr($name,  0, 100);
     $email = substr($email, 0, 100);
-    $phone = substr($phone, 0, 20);
+    $phone = substr($phone, 0, 30);
+    $config = substr($config, 0, 50);
 
-    $phone_digits = preg_replace('/\D/', '', $phone);
+    $phone_digits = preg_replace('/[^\d+]/', '', $phone);
     if (strlen($phone_digits) < 7 || strlen($phone_digits) > 15) {
         http_response_code(400);
         echo "Invalid phone number.";
@@ -61,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $safe_name  = htmlspecialchars($name,  ENT_QUOTES, 'UTF-8');
     $safe_email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
     $safe_phone = htmlspecialchars($phone_digits, ENT_QUOTES, 'UTF-8');
+    $safe_config = htmlspecialchars($config, ENT_QUOTES, 'UTF-8');
 
     $mail = new PHPMailer(true);
 
@@ -78,12 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('thegrowthmonks@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'New Lead - Mahindra Rainforest, Kanjur-Bhandup PPC';
+        $mail->Subject = 'New Lead - Mahindra Vista Kandivali East';
         $mail->Body = "
             <h2>New Lead Submission</h2>
             <p><strong>Name:</strong> {$safe_name}</p>
             <p><strong>Email:</strong> {$safe_email}</p>
             <p><strong>Phone:</strong> {$safe_phone}</p>
+            <p><strong>Interested Configuration:</strong> {$safe_config}</p>
+            <p><strong>Project:</strong> Mahindra Vista Kandivali</p>
         ";
 
         if ($mail->send()) {
@@ -93,7 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 "name"         => $safe_name,
                 "email"        => $safe_email,
                 "phone"        => $safe_phone,
-                "source"       => "Mahindra Rainforest PPC Landing Page",
+                "config"       => $safe_config,
+                "source"       => "Mahindra Vista Kandivali Website",
                 "submitted_at" => date("Y-m-d H:i:s")
             ]);
 
